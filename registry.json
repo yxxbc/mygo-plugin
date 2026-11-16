@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-11-09T13:28:32Z",
+  "generatedAt": "2026-11-16T13:14:24Z",
   "entries": [
     {
       "id": "ampache",
@@ -34,7 +34,7 @@
           "stations",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:26Z"
+        "checkedAt": "2026-11-16T13:14:13Z"
       },
       "stars": 3,
       "pushedAt": "2026-11-09T12:19:41Z"
@@ -83,76 +83,81 @@
           "savedAlbums",
           "search"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:17Z"
       },
-      "stars": 1,
       "pushedAt": "2026-11-07T13:48:16Z",
       "license": "AGPL-3.0"
     },
     {
-      "id": "bilibili",
-      "name": "Bilibili",
-      "version": "0.4.1",
-      "repo": "GentleM4dman/mygo-music-bilibili",
+      "id": "apple-podcasts",
+      "name": "Apple Podcasts",
+      "version": "0.2.0-preview.2",
+      "repo": "AceYKN/mygo-music-apple-podcasts",
       "main": "index.js",
-      "minAppVersion": "0.1.21",
+      "minAppVersion": "0.1.22",
       "permissions": {
         "network": [
-          "api.bilibili.com",
-          "passport.bilibili.com",
-          "s.search.bilibili.com",
-          "b23.tv",
-          "*.hdslb.com",
-          "aisubtitle.hdslb.com"
+          "127.0.0.1"
         ],
         "process": [
-          "ffmpeg",
-          "/opt/homebrew/bin/ffmpeg",
-          "/usr/local/bin/ffmpeg"
+          "bin/apple-podcasts-helper.exe",
+          "bin/apple-podcasts-helper"
         ]
       },
       "health": {
         "status": "ok",
         "exports": [
           "account",
-          "addToPlaylist",
-          "album",
-          "artist",
           "browse",
-          "comments",
-          "createPlaylist",
-          "followArtist",
           "home",
           "isLiked",
-          "like",
-          "likeComment",
+          "likeEpisode",
           "liked",
-          "lyrics",
-          "played",
-          "playlist",
-          "playlists",
-          "postComment",
+          "playbackProgress",
+          "playbackStart",
           "recent",
-          "removeFromPlaylist",
-          "renamePlaylist",
           "search",
+          "setSetting",
+          "show",
+          "shows",
           "signIn",
           "signOut",
-          "stationNext",
-          "stations",
           "stream",
-          "suggest"
+          "subscribeShow"
         ],
-        "checkedAt": "2026-11-09T13:28:23Z"
+        "checkedAt": "2026-11-16T13:14:05Z"
       },
-      "stars": 26,
-      "pushedAt": "2026-11-09T10:52:13Z",
+      "stars": 1,
+      "pushedAt": "2026-11-11T06:01:34Z"
+    },
+    {
+      "id": "bitrate",
+      "name": "Bitrate",
+      "version": "1.0.0",
+      "repo": "ivanxguo/mygo-music-bitrate",
+      "main": "index.js",
+      "minAppVersion": "0.1.8",
+      "permissions": {
+        "network": [
+          "interface.music.163.com"
+        ]
+      },
+      "health": {
+        "status": "ok",
+        "exports": [
+          "browse",
+          "search"
+        ],
+        "checkedAt": "2026-11-16T13:14:19Z"
+      },
+      "stars": 1,
+      "pushedAt": "2026-11-11T05:12:46Z",
       "license": "MIT"
     },
     {
       "id": "bodian",
       "name": "Bodian Music",
-      "version": "0.3.1",
+      "version": "0.3.3",
       "repo": "amqsy/mygo-music-bodian",
       "main": "index.js",
       "minAppVersion": "0.1.17",
@@ -162,6 +167,7 @@
           "mlyric.kuwo.cn"
         ]
       },
+      "sha256": "13d0ad894674a90e5ad9de68cdddee073a0d4f1fe10dae1838a9eb4d5c6c53e0",
       "health": {
         "status": "ok",
         "exports": [
@@ -196,10 +202,10 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:27Z"
+        "checkedAt": "2026-11-16T13:14:13Z"
       },
-      "stars": 2,
-      "pushedAt": "2026-11-09T12:55:19Z",
+      "stars": 4,
+      "pushedAt": "2026-11-15T18:30:40Z",
       "license": "MIT"
     },
     {
@@ -237,10 +243,93 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:30Z"
+        "checkedAt": "2026-11-16T13:14:20Z"
       },
       "stars": 2,
       "pushedAt": "2026-11-07T07:23:41Z"
+    },
+    {
+      "id": "cnradio",
+      "name": "云听 · 央广在线收音机",
+      "version": "1.1.0",
+      "description": "云听(radio.cn) 电台直播与节目回听：全国 32 个地区 900+ 个电台、按地区/类型浏览、搜索、正在直播的节目名，以及往期节目回听。",
+      "repo": "andy8401/mygo-music-cnradio",
+      "main": "index.js",
+      "minAppVersion": "0.1.8",
+      "permissions": {
+        "network": [
+          "*.radio.cn",
+          "radio.cn",
+          "127.0.0.1",
+          "localhost"
+        ],
+        "process": [
+          "python3",
+          "python",
+          "py",
+          "ffmpeg"
+        ]
+      },
+      "health": {
+        "status": "ok",
+        "exports": [
+          "browse",
+          "home",
+          "search",
+          "setSetting",
+          "stationNext",
+          "stations",
+          "stream",
+          "suggest"
+        ],
+        "checkedAt": "2026-11-16T13:14:13Z"
+      },
+      "pushedAt": "2026-11-13T07:24:06Z"
+    },
+    {
+      "id": "douyin-jingxuan",
+      "name": "抖音精选",
+      "version": "0.8.7",
+      "repo": "GYRYEZ/mygo-music-douyin",
+      "main": "index.js",
+      "minAppVersion": "0.1.8",
+      "permissions": {
+        "network": [
+          "*.douyinpic.com",
+          "*.byteimg.com"
+        ],
+        "process": [
+          "ffmpeg",
+          "/opt/homebrew/bin/ffmpeg",
+          "/usr/local/bin/ffmpeg",
+          "/usr/bin/ffmpeg",
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+          "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+          "/Applications/Chromium.app/Contents/MacOS/Chromium",
+          "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser",
+          "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+          "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe",
+          "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+          "/usr/bin/google-chrome",
+          "/usr/bin/chromium",
+          "/usr/bin/chromium-browser",
+          "helpers/follow.py"
+        ]
+      },
+      "health": {
+        "status": "ok",
+        "exports": [
+          "album",
+          "artist",
+          "browse",
+          "home",
+          "stationNext",
+          "stations",
+          "stream"
+        ],
+        "checkedAt": "2026-11-16T13:14:07Z"
+      },
+      "pushedAt": "2026-11-13T12:50:05Z"
     },
     {
       "id": "download-music",
@@ -276,32 +365,58 @@
           "search",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:32Z"
+        "checkedAt": "2026-11-16T13:14:24Z"
       },
-      "stars": 6,
+      "stars": 9,
       "pushedAt": "2026-11-07T15:47:28Z",
       "license": "MIT"
     },
     {
       "id": "emby",
-      "name": "Emby / Jellyfin",
-      "version": "0.1.0",
-      "repo": "LYJW131/mygo-music-emby-jellyfin",
+      "name": "Emby",
+      "version": "0.3.1",
+      "repo": "moewah/mygo-music-emby",
       "main": "index.js",
-      "minAppVersion": "0.1.21",
+      "minAppVersion": "0.1.24",
       "permissions": {
         "network": [
           "*"
         ]
       },
-      "sha256": "f306ad6980c3cdb953cf0c3dbba57a95a4229c2f6d500664a9859aa7acf56a58",
       "health": {
-        "status": "error",
-        "error": "LYJW131/mygo-music-emby-jellyfin: index.js: 404 Not Found",
-        "checkedAt": "2026-11-09T13:28:24Z"
+        "status": "ok",
+        "exports": [
+          "account",
+          "addToPlaylist",
+          "album",
+          "artist",
+          "browse",
+          "createPlaylist",
+          "deletePlaylist",
+          "followArtist",
+          "home",
+          "isLiked",
+          "like",
+          "liked",
+          "lyrics",
+          "movePlaylistTrack",
+          "played",
+          "playlist",
+          "playlists",
+          "recent",
+          "removeFromPlaylist",
+          "renamePlaylist",
+          "saveAlbum",
+          "savedAlbums",
+          "search",
+          "setSetting",
+          "signIn",
+          "signOut",
+          "stream"
+        ],
+        "checkedAt": "2026-11-16T13:14:20Z"
       },
-      "stars": 2,
-      "pushedAt": "2026-11-08T14:14:01Z",
+      "pushedAt": "2026-11-13T15:11:26Z",
       "license": "AGPL-3.0"
     },
     {
@@ -347,7 +462,7 @@
           "stations",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:25Z"
+        "checkedAt": "2026-11-16T13:14:10Z"
       },
       "pushedAt": "2026-11-07T07:03:23Z"
     },
@@ -391,11 +506,124 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:32Z"
+        "checkedAt": "2026-11-16T13:14:24Z"
       },
       "stars": 4,
       "pushedAt": "2026-11-07T02:11:35Z",
       "license": "AGPL-3.0"
+    },
+    {
+      "id": "hulu-music",
+      "name": "葫芦音乐",
+      "version": "1.3.1",
+      "description": "聚合网易云、B站、酷我、QQ、播客的音源插件，多平台互备（已移除 YouTube 与直播电台）",
+      "repo": "hhym/mygo-music-hulumusic-plugin",
+      "main": "index.js",
+      "minAppVersion": "0.1.8",
+      "permissions": {
+        "network": [
+          "music.163.com",
+          "*.126.net",
+          "*.163.com",
+          "search.kuwo.cn",
+          "antiserver.kuwo.cn",
+          "*.kuwo.cn",
+          "lrclib.net",
+          "github.com",
+          "objects.githubusercontent.com",
+          "release-assets.githubusercontent.com",
+          "api.bilibili.com",
+          "*.bilibili.com",
+          "*.bilivideo.com",
+          "*.bilivideo.cn",
+          "*.mcdn.bilivideo.cn",
+          "*.hdslb.com",
+          "*.jsdelivr.net",
+          "podtown.xyz",
+          "*.myqcloud.com",
+          "*.fireside.fm",
+          "*.xyzfm.space",
+          "*.xyzcdn.net",
+          "raw.githubusercontent.com",
+          "c.y.qq.com",
+          "u.y.qq.com",
+          "y.qq.com",
+          "*.qq.com",
+          "*.gtimg.cn",
+          "itunes.apple.com",
+          "*.apple.com",
+          "feed.xyzfm.space",
+          "*.xiaoyuzhoufm.com",
+          "*.xyzcdn.net",
+          "*.ximalaya.com",
+          "*.libsyn.com",
+          "*.simplecast.com",
+          "*.megaphone.fm",
+          "*.acast.com",
+          "*.buzzsprout.com",
+          "*.podbean.com",
+          "*.typlog.io",
+          "*.anchor.fm"
+        ],
+        "process": [
+          "bin/win32-amd64/ffmpeg.exe",
+          "bin/win32-arm64/ffmpeg.exe",
+          "bin/darwin-arm64/ffmpeg",
+          "bin/darwin-amd64/ffmpeg",
+          "bin/linux-amd64/ffmpeg",
+          "bin/linux-arm64/ffmpeg",
+          "powershell",
+          "pwsh",
+          "/bin/sh",
+          "ffmpeg",
+          "ffmpeg.exe",
+          "/opt/homebrew/bin/ffmpeg",
+          "/usr/local/bin/ffmpeg",
+          "/usr/bin/ffmpeg",
+          "/snap/bin/ffmpeg",
+          "C:\\ffmpeg\\bin\\ffmpeg.exe",
+          "C:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe"
+        ]
+      },
+      "sha256": "aa76fbaa8558bd049e8bbf2afa0304a533202aaddf25c2766c4d55332731748b",
+      "health": {
+        "status": "ok",
+        "exports": [
+          "addToPlaylist",
+          "album",
+          "artist",
+          "browse",
+          "createPlaylist",
+          "deletePlaylist",
+          "followArtist",
+          "home",
+          "isLiked",
+          "isSameArtistStrict",
+          "like",
+          "liked",
+          "lyrics",
+          "movePlaylistTrack",
+          "played",
+          "playlist",
+          "playlists",
+          "recent",
+          "removeFromPlaylist",
+          "renamePlaylist",
+          "resetProxyCache",
+          "savePlaylist",
+          "search",
+          "setSetting",
+          "show",
+          "shows",
+          "stopServing",
+          "stream",
+          "subscribeShow",
+          "suggest"
+        ],
+        "checkedAt": "2026-11-16T13:14:16Z"
+      },
+      "stars": 1,
+      "pushedAt": "2026-11-13T05:30:45Z"
     },
     {
       "id": "incompetech",
@@ -424,7 +652,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:24Z"
+        "checkedAt": "2026-11-16T13:14:12Z"
       },
       "pushedAt": "2026-11-08T10:33:39Z",
       "license": "MIT"
@@ -463,66 +691,10 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:28Z"
+        "checkedAt": "2026-11-16T13:14:16Z"
       },
       "pushedAt": "2026-11-06T17:10:36Z",
       "license": "MIT"
-    },
-    {
-      "id": "kugou-lite",
-      "name": "Kugou Concept",
-      "version": "1.3.0",
-      "repo": "bitbyte404/mygo-music-kugou-lite",
-      "main": "index.js",
-      "minAppVersion": "0.1.8",
-      "permissions": {
-        "network": [
-          "gateway.kugou.com",
-          "openapi.kugou.com",
-          "login-user.kugou.com",
-          "lyrics.kugou.com",
-          "krcs.kugou.com",
-          "kugouvip.kugou.com",
-          "userservice.kugou.com",
-          "mcloudservice.kugou.com"
-        ]
-      },
-      "health": {
-        "status": "ok",
-        "exports": [
-          "account",
-          "addToPlaylist",
-          "album",
-          "artist",
-          "browse",
-          "comments",
-          "createPlaylist",
-          "deletePlaylist",
-          "home",
-          "isLiked",
-          "like",
-          "liked",
-          "lyrics",
-          "played",
-          "playlist",
-          "playlists",
-          "recent",
-          "removeFromPlaylist",
-          "renamePlaylist",
-          "savePlaylist",
-          "search",
-          "signIn",
-          "signOut",
-          "stationNext",
-          "stations",
-          "stream",
-          "suggest"
-        ],
-        "checkedAt": "2026-11-09T13:28:27Z"
-      },
-      "stars": 10,
-      "pushedAt": "2026-11-06T21:33:41Z",
-      "license": "NOASSERTION"
     },
     {
       "id": "lizhi",
@@ -559,9 +731,9 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:27Z"
+        "checkedAt": "2026-11-16T13:14:14Z"
       },
-      "stars": 71,
+      "stars": 82,
       "pushedAt": "2026-11-07T02:37:12Z"
     },
     {
@@ -594,7 +766,7 @@
           "setSetting",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:22Z"
+        "checkedAt": "2026-11-16T13:14:05Z"
       },
       "stars": 1,
       "pushedAt": "2026-11-07T14:50:05Z",
@@ -628,68 +800,15 @@
           "signOut",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:19Z"
       },
       "pushedAt": "2026-11-07T14:36:08Z",
       "license": "AGPL-3.0"
     },
     {
-      "id": "migu",
-      "name": "Migu Music",
-      "version": "0.2.0",
-      "repo": "Maker-World/mygo-music-migu",
-      "main": "index.js",
-      "minAppVersion": "0.1.21",
-      "permissions": {
-        "network": [
-          "music.migu.cn",
-          "passport.migu.cn",
-          "app.c.nf.migu.cn",
-          "app.u.nf.migu.cn",
-          "c.musicapp.migu.cn",
-          "d.musicapp.migu.cn"
-        ]
-      },
-      "health": {
-        "status": "ok",
-        "exports": [
-          "account",
-          "addToPlaylist",
-          "album",
-          "artist",
-          "browse",
-          "createPlaylist",
-          "decrypt",
-          "deletePlaylist",
-          "encrypt",
-          "home",
-          "isLiked",
-          "like",
-          "liked",
-          "lyrics",
-          "playlist",
-          "playlists",
-          "removeFromPlaylist",
-          "renamePlaylist",
-          "saveAlbum",
-          "savePlaylist",
-          "savedAlbums",
-          "search",
-          "signIn",
-          "signOut",
-          "stationNext",
-          "stations",
-          "stream",
-          "suggest"
-        ],
-        "checkedAt": "2026-11-09T13:28:25Z"
-      },
-      "pushedAt": "2026-11-08T14:28:23Z"
-    },
-    {
       "id": "music-fusion",
       "name": "NetEaseXQQMusic",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "repo": "hiSlowMo/neteaseXqqmusic",
       "main": "dist/index.js",
       "minAppVersion": "0.1.20",
@@ -718,7 +837,7 @@
           "bin/qqmusic-login-windows-amd64.exe"
         ]
       },
-      "sha256": "ae062496b8a6261e2c53d5dfe6cb741fd93ca77ba26c0f11b4eead6441d74084",
+      "sha256": "4c0c79109e504bce4b05665d1dfd998724f836208314c335a4be587d7bcb1bff",
       "health": {
         "status": "ok",
         "exports": [
@@ -730,31 +849,62 @@
           "comments",
           "createPlaylist",
           "deletePlaylist",
+          "followArtist",
           "home",
           "isLiked",
           "like",
+          "likeComment",
           "liked",
           "lyrics",
           "movePlaylistTrack",
           "played",
           "playlist",
           "playlists",
+          "postComment",
           "recent",
           "removeFromPlaylist",
           "renamePlaylist",
+          "savePlaylist",
           "search",
           "setSetting",
+          "show",
+          "shows",
           "signIn",
           "signOut",
           "stationNext",
           "stations",
           "stream",
+          "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:17Z"
       },
       "stars": 2,
-      "pushedAt": "2026-11-09T07:05:13Z",
+      "pushedAt": "2026-11-09T15:25:10Z",
+      "license": "AGPL-3.0"
+    },
+    {
+      "id": "mygo-discord-presence",
+      "name": "MyGo Discord 状态",
+      "version": "0.1.7",
+      "repo": "Kagura114514/mygo-music-discord-presence-addon",
+      "main": "index.js",
+      "minAppVersion": "0.1.20",
+      "permissions": {
+        "process": [
+          "powershell.exe"
+        ]
+      },
+      "sha256": "a5079e3fef1b8d0fe495ae91ac43e734a026827c1249d0dff5aa1b5fcc64b9a9",
+      "health": {
+        "status": "ok",
+        "exports": [
+          "home"
+        ],
+        "checkedAt": "2026-11-16T13:14:08Z"
+      },
+      "stars": 1,
+      "pushedAt": "2026-11-11T12:49:00Z",
       "license": "AGPL-3.0"
     },
     {
@@ -794,9 +944,9 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:30Z"
+        "checkedAt": "2026-11-16T13:14:20Z"
       },
-      "stars": 2,
+      "stars": 3,
       "pushedAt": "2026-11-08T05:45:51Z"
     },
     {
@@ -814,6 +964,8 @@
           "clienttoken.spotify.com",
           "gist.githubusercontent.com",
           "music.youtube.com",
+          "youtube.com",
+          "www.youtube.com",
           "lrclib.net",
           "music.163.com"
         ],
@@ -853,10 +1005,10 @@
           "stations",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:30Z"
+        "checkedAt": "2026-11-16T13:14:21Z"
       },
-      "stars": 5,
-      "pushedAt": "2026-11-07T12:14:31Z",
+      "stars": 10,
+      "pushedAt": "2026-11-14T04:33:22Z",
       "license": "AGPL-3.0"
     },
     {
@@ -905,7 +1057,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:26Z"
+        "checkedAt": "2026-11-16T13:14:11Z"
       },
       "pushedAt": "2026-11-09T01:54:21Z",
       "license": "AGPL-3.0"
@@ -963,7 +1115,7 @@
           "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:22Z"
+        "checkedAt": "2026-11-16T13:14:06Z"
       },
       "pushedAt": "2026-11-07T03:04:10Z",
       "license": "MIT"
@@ -1008,7 +1160,7 @@
           "stations",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:23Z"
+        "checkedAt": "2026-11-16T13:14:06Z"
       },
       "stars": 2,
       "pushedAt": "2026-11-08T08:00:35Z",
@@ -1017,7 +1169,7 @@
     {
       "id": "netease-cloud-music",
       "name": "NetEase Cloud Music",
-      "version": "0.1.11",
+      "version": "0.1.13",
       "repo": "AkinoKaede/mygo-music-netease-cloud-music",
       "main": "index.js",
       "minAppVersion": "0.1.20",
@@ -1027,14 +1179,14 @@
           "interfacepc.music.163.com"
         ]
       },
-      "sha256": "be19c09b7611b7bc682cc640681b508927d05655afb297fdfc1b164a6e72d40f",
+      "sha256": "a866d5c0be5e15466271bd77f2c5101a112c8bd2570586dfce1590d58d71fe00",
       "health": {
         "status": "error",
         "error": "AkinoKaede/mygo-music-netease-cloud-music: index.js: 404 Not Found",
-        "checkedAt": "2026-11-09T13:28:22Z"
+        "checkedAt": "2026-11-16T13:14:05Z"
       },
-      "stars": 44,
-      "pushedAt": "2026-11-07T11:24:28Z",
+      "stars": 55,
+      "pushedAt": "2026-11-13T14:16:50Z",
       "license": "AGPL-3.0"
     },
     {
@@ -1092,7 +1244,7 @@
           "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:22Z"
+        "checkedAt": "2026-11-16T13:14:06Z"
       },
       "stars": 1,
       "pushedAt": "2026-11-06T20:21:35Z",
@@ -1155,15 +1307,15 @@
           "suggest",
           "upload"
         ],
-        "checkedAt": "2026-11-09T13:28:25Z"
+        "checkedAt": "2026-11-16T13:14:11Z"
       },
-      "stars": 13,
+      "stars": 19,
       "pushedAt": "2026-11-09T06:33:26Z"
     },
     {
       "id": "netease-plus",
       "name": "网易云音乐 Plus",
-      "version": "0.2.0",
+      "version": "0.2.6",
       "repo": "VenusLuna/mygo-music-netease-plus",
       "main": "index.js",
       "minAppVersion": "0.1.20",
@@ -1173,7 +1325,7 @@
           "interfacepc.music.163.com"
         ]
       },
-      "sha256": "b939d368647c3098d768ff7cf665023bc94c906f6e43e1a0ee8d2526fe74fd60",
+      "sha256": "8281110078b07ffe3f90817d39932793da6f5c21922270b11b813b82fcdf308c",
       "health": {
         "status": "ok",
         "exports": [
@@ -1183,14 +1335,24 @@
           "artist",
           "browse",
           "comments",
+          "createPlaylist",
+          "deletePlaylist",
+          "followArtist",
           "home",
           "isLiked",
           "like",
+          "likeComment",
           "liked",
           "lyrics",
+          "movePlaylistTrack",
           "playlist",
           "playlists",
+          "postComment",
           "removeFromPlaylist",
+          "renamePlaylist",
+          "saveAlbum",
+          "savePlaylist",
+          "savedAlbums",
           "search",
           "show",
           "shows",
@@ -1198,13 +1360,38 @@
           "signOut",
           "stationNext",
           "stations",
+          "stream",
+          "suggest"
+        ],
+        "checkedAt": "2026-11-16T13:14:12Z"
+      },
+      "stars": 3,
+      "pushedAt": "2026-11-12T11:40:46Z",
+      "license": "AGPL-3.0"
+    },
+    {
+      "id": "network-radio",
+      "name": "Network Radio",
+      "version": "1.3.0",
+      "description": "161 live internet radio streams, from SomaFM to public broadcasters: pick a station and it plays until you stop it. 161 个在线电台，点一个就一直播下去。",
+      "repo": "eutleek/mygo-radio",
+      "main": "index.js",
+      "minAppVersion": "0.1.8",
+      "permissions": {},
+      "sha256": "cfd1c89b416c728ba9554d9ae608306166d4f4ecfacf21d4042ad5cd79b5e8c4",
+      "health": {
+        "status": "ok",
+        "exports": [
+          "browse",
+          "home",
+          "stationNext",
+          "stations",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:26Z"
+        "checkedAt": "2026-11-16T13:14:15Z"
       },
-      "stars": 1,
-      "pushedAt": "2026-11-09T11:47:36Z",
-      "license": "AGPL-3.0"
+      "pushedAt": "2026-11-12T01:31:42Z",
+      "license": "MIT"
     },
     {
       "id": "overcast",
@@ -1272,7 +1459,7 @@
           "xmlBlocks",
           "xmlText"
         ],
-        "checkedAt": "2026-11-09T13:28:26Z"
+        "checkedAt": "2026-11-16T13:14:12Z"
       },
       "pushedAt": "2026-11-07T12:27:47Z",
       "license": "MIT"
@@ -1320,56 +1507,121 @@
           "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:30Z"
+        "checkedAt": "2026-11-16T13:14:19Z"
       },
       "stars": 2,
       "pushedAt": "2026-11-07T15:28:52Z",
       "license": "MIT"
     },
     {
-      "id": "qishui",
-      "name": "汽水音乐",
-      "version": "0.4.5",
-      "repo": "DaviRain-Su/mygo-music-qishui",
+      "id": "qingting",
+      "name": "蜻蜓FM",
+      "version": "1.7.0",
+      "repo": "hhym/mygo-music-qingtingfm-main",
       "main": "index.js",
-      "minAppVersion": "0.1.7",
+      "minAppVersion": "0.1.8",
+      "permissions": {
+        "network": [
+          "webapi.qingting.fm",
+          "api2.qingting.fm",
+          "audio.qtfm.cn",
+          "lhttp-hw.qtfm.cn",
+          "*.qtfm.cn",
+          "user.qtfm.cn"
+        ],
+        "process": [
+          "ffmpeg",
+          "ffmpeg.exe",
+          "/opt/homebrew/bin/ffmpeg",
+          "/usr/local/bin/ffmpeg",
+          "/usr/bin/ffmpeg",
+          "/snap/bin/ffmpeg",
+          "C:\\ffmpeg\\bin\\ffmpeg.exe",
+          "C:\\Program Files\\ffmpeg\\bin\\ffmpeg.exe"
+        ]
+      },
+      "health": {
+        "status": "ok",
+        "exports": [
+          "account",
+          "browse",
+          "home",
+          "isLiked",
+          "like",
+          "likeEpisode",
+          "liked",
+          "played",
+          "recent",
+          "search",
+          "show",
+          "shows",
+          "signIn",
+          "signOut",
+          "stationNext",
+          "stations",
+          "stream",
+          "subscribeShow",
+          "suggest"
+        ],
+        "checkedAt": "2026-11-16T13:14:16Z"
+      },
+      "stars": 1,
+      "pushedAt": "2026-11-12T16:17:16Z"
+    },
+    {
+      "id": "qishui",
+      "name": "Qishui Music",
+      "version": "0.9.10",
+      "repo": "qile222/mygo-music-qishui",
+      "main": "index.js",
+      "minAppVersion": "0.1.22",
       "permissions": {
         "network": [
           "api.qishui.com",
-          "api5-lq.qishui.com",
-          "*.qishui.com"
+          "*.qishui.com",
+          "beta-luna.douyin.com",
+          "*.douyin.com",
+          "*.douyinpic.com",
+          "*.douyinvod.com",
+          "*.douyincdn.com"
         ],
         "process": [
-          "node",
-          "/opt/homebrew/bin/node",
-          "/usr/local/bin/node",
-          "ffmpeg",
-          "/opt/homebrew/bin/ffmpeg",
-          "/usr/local/bin/ffmpeg"
+          "/usr/bin/base64",
+          "/usr/bin/env"
         ]
       },
-      "sha256": "f12cd65f87706f9116d6bee46558b21ca78f4ce785c150110df820f56a3f2dbc",
+      "sha256": "cb6b297934ba71cd4c6ceae23a96520771c6a860b2dc2978b0c4ce0e3118affe",
       "health": {
         "status": "ok",
         "exports": [
           "account",
           "addToPlaylist",
+          "album",
+          "artist",
           "browse",
           "comments",
           "createPlaylist",
           "deletePlaylist",
+          "followArtist",
           "home",
           "isLiked",
           "like",
+          "likeComment",
+          "likeReply",
           "liked",
           "lyrics",
+          "movePlaylistTrack",
           "played",
           "playlist",
+          "playlistPage",
           "playlists",
           "postComment",
+          "postReply",
           "recent",
+          "refreshBrowse",
           "removeFromPlaylist",
           "renamePlaylist",
+          "replies",
           "saveAlbum",
           "savePlaylist",
           "savedAlbums",
@@ -1378,17 +1630,18 @@
           "signOut",
           "stationNext",
           "stations",
-          "stream"
+          "stream",
+          "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:23Z"
+        "checkedAt": "2026-11-16T13:14:21Z"
       },
-      "stars": 12,
-      "pushedAt": "2026-11-07T03:03:19Z"
+      "pushedAt": "2026-11-16T12:13:35Z",
+      "license": "MIT"
     },
     {
       "id": "qishui-app-login",
       "name": "汽水音乐",
-      "version": "1.0.11",
+      "version": "1.0.15",
       "repo": "lane128/mygo-music-qishui",
       "main": "index.js",
       "minAppVersion": "0.1.20",
@@ -1402,7 +1655,7 @@
           "bin/qishui-helper-*"
         ]
       },
-      "sha256": "172fa5d60e6d1bc2410412aa7dbfc6420222a324ec495a5eb3834698dfa2d5c4",
+      "sha256": "be9e86ecf1ef1d53a2b44ca8ef3fb9e5d134c22a56de94d6c51a66421ede95e4",
       "health": {
         "status": "ok",
         "exports": [
@@ -1440,25 +1693,27 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:18Z"
       },
-      "stars": 12,
-      "pushedAt": "2026-11-08T17:24:45Z",
+      "stars": 15,
+      "pushedAt": "2026-11-14T07:01:52Z",
       "license": "AGPL-3.0"
     },
     {
       "id": "qqmusic",
       "name": "QQ Music",
-      "version": "0.3.2",
-      "repo": "Lorpaves/mygo-music-qqmusic",
+      "version": "0.5.1",
+      "repo": "hhym/mygo-music-qqmusic-plugin",
       "main": "dist/index.js",
-      "minAppVersion": "0.1.20",
+      "minAppVersion": "0.1.8",
       "permissions": {
         "network": [
           "u.y.qq.com",
           "c.y.qq.com",
           "c6.y.qq.com",
           "y.qq.com",
+          "y.gtimg.cn",
+          "*.y.qq.com",
           "xui.ptlogin2.qq.com",
           "ssl.ptlogin2.graph.qq.com",
           "graph.qq.com",
@@ -1467,7 +1722,6 @@
           "lp.open.weixin.qq.com"
         ]
       },
-      "sha256": "b0822e62c4081e6b717cb540a824aaa3917320c61afb04623e4ef78d79991074",
       "health": {
         "status": "ok",
         "exports": [
@@ -1506,11 +1760,46 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:25Z"
+        "checkedAt": "2026-11-16T13:14:16Z"
       },
-      "stars": 3,
-      "pushedAt": "2026-11-07T08:27:30Z",
+      "stars": 1,
+      "pushedAt": "2026-11-13T03:28:30Z",
       "license": "AGPL-3.0"
+    },
+    {
+      "id": "radio",
+      "name": "Radio",
+      "version": "0.1.0",
+      "repo": "jockcc/mygo-music-radio",
+      "main": "index.js",
+      "minAppVersion": "0.1.20",
+      "permissions": {
+        "network": [
+          "*.radio-browser.info"
+        ]
+      },
+      "sha256": "d8d050f8656b332d20462e84cc8cbc2fffc74c3757cb50fd58e757521a9f20e8",
+      "health": {
+        "status": "ok",
+        "exports": [
+          "browse",
+          "home",
+          "isLiked",
+          "like",
+          "liked",
+          "played",
+          "recent",
+          "search",
+          "setSetting",
+          "stationNext",
+          "stations",
+          "stream",
+          "suggest"
+        ],
+        "checkedAt": "2026-11-16T13:14:18Z"
+      },
+      "pushedAt": "2026-11-11T12:15:56Z",
+      "license": "MIT"
     },
     {
       "id": "roamdial",
@@ -1533,8 +1822,9 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:23Z"
+        "checkedAt": "2026-11-16T13:14:07Z"
       },
+      "stars": 2,
       "pushedAt": "2026-11-09T09:15:27Z"
     },
     {
@@ -1578,7 +1868,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:30Z"
+        "checkedAt": "2026-11-16T13:14:20Z"
       },
       "pushedAt": "2026-11-09T06:56:57Z",
       "license": "MIT"
@@ -1627,7 +1917,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:31Z"
+        "checkedAt": "2026-11-16T13:14:21Z"
       },
       "stars": 1,
       "pushedAt": "2026-11-07T11:32:37Z",
@@ -1689,7 +1979,7 @@
           "signOut",
           "subscribeShow"
         ],
-        "checkedAt": "2026-11-09T13:28:32Z"
+        "checkedAt": "2026-11-16T13:14:23Z"
       },
       "stars": 4,
       "pushedAt": "2026-11-07T07:45:29Z"
@@ -1758,9 +2048,9 @@
           "signOut",
           "subscribeShow"
         ],
-        "checkedAt": "2026-11-09T13:28:32Z"
+        "checkedAt": "2026-11-16T13:14:22Z"
       },
-      "stars": 1,
+      "stars": 4,
       "pushedAt": "2026-11-07T19:30:27Z",
       "license": "AGPL-3.0"
     },
@@ -1812,59 +2102,10 @@
           "signIn",
           "signOut"
         ],
-        "checkedAt": "2026-11-09T13:28:31Z"
+        "checkedAt": "2026-11-16T13:14:22Z"
       },
       "pushedAt": "2026-11-07T18:55:13Z",
       "license": "MIT"
-    },
-    {
-      "id": "subsonic",
-      "name": "Subsonic",
-      "version": "0.1.8",
-      "repo": "TexasOct/mygo-subsonic",
-      "main": "index.js",
-      "minAppVersion": "0.1.13",
-      "permissions": {
-        "network": [
-          "*"
-        ]
-      },
-      "sha256": "6ae2d8fa17ce4e0044e88c0eb537768d7776ced25388b41ec9449815eba16038",
-      "health": {
-        "status": "ok",
-        "exports": [
-          "account",
-          "addToPlaylist",
-          "album",
-          "artist",
-          "browse",
-          "createPlaylist",
-          "deletePlaylist",
-          "followArtist",
-          "home",
-          "isLiked",
-          "like",
-          "liked",
-          "lyrics",
-          "movePlaylistTrack",
-          "played",
-          "playlist",
-          "playlists",
-          "removeFromPlaylist",
-          "renamePlaylist",
-          "saveAlbum",
-          "savedAlbums",
-          "search",
-          "setSetting",
-          "signIn",
-          "signOut",
-          "stream"
-        ],
-        "checkedAt": "2026-11-09T13:28:26Z"
-      },
-      "stars": 1,
-      "pushedAt": "2026-11-09T11:20:09Z",
-      "license": "AGPL-3.0"
     },
     {
       "id": "synology-audio",
@@ -1900,7 +2141,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:19Z"
       },
       "pushedAt": "2026-11-07T08:14:31Z",
       "license": "MIT"
@@ -1925,7 +2166,7 @@
           "findAMLL",
           "setSetting"
         ],
-        "checkedAt": "2026-11-09T13:28:28Z"
+        "checkedAt": "2026-11-16T13:14:15Z"
       },
       "pushedAt": "2026-11-08T09:36:50Z"
     },
@@ -1958,7 +2199,7 @@
           "setSetting",
           "stream"
         ],
-        "checkedAt": "2026-11-09T13:28:29Z"
+        "checkedAt": "2026-11-16T13:14:17Z"
       },
       "stars": 1,
       "pushedAt": "2026-11-09T06:41:03Z"
@@ -2019,7 +2260,7 @@
           "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:28Z"
+        "checkedAt": "2026-11-16T13:14:15Z"
       },
       "pushedAt": "2026-11-09T09:13:26Z",
       "license": "AGPL-3.0"
@@ -2077,16 +2318,16 @@
           "unavailableReason",
           "webApi"
         ],
-        "checkedAt": "2026-11-09T13:28:31Z"
+        "checkedAt": "2026-11-16T13:14:21Z"
       },
-      "stars": 6,
+      "stars": 8,
       "pushedAt": "2026-11-07T06:41:08Z",
       "license": "NOASSERTION"
     },
     {
       "id": "ximalaya",
       "name": "喜马拉雅",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "repo": "LANMIN-X/mygo-plugin-ximalaya",
       "main": "index.js",
       "minAppVersion": "0.1.20",
@@ -2099,7 +2340,7 @@
           "*.qrstuvwxyzab.com"
         ]
       },
-      "sha256": "330f5135a5260647bfc15dd1657441c623fa29742edd5b2329910c8169eebfd5",
+      "sha256": "22b6ea7320d4d473d083ca9f3a34ce8e2301f32ed5c1dbb43654fc91df59a809",
       "health": {
         "status": "ok",
         "exports": [
@@ -2117,10 +2358,43 @@
           "subscribeShow",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:24Z"
+        "checkedAt": "2026-11-16T13:14:09Z"
       },
       "stars": 2,
-      "pushedAt": "2026-11-08T08:41:43Z"
+      "pushedAt": "2026-11-13T06:08:55Z"
+    },
+    {
+      "id": "ximalaya-web",
+      "name": "喜马拉雅网页版",
+      "version": "0.1.1",
+      "repo": "andy8401/mygo-ximalaya-web-plugin",
+      "main": "index.js",
+      "minAppVersion": "0.1.20",
+      "permissions": {
+        "network": [
+          "www.ximalaya.com",
+          "passport.ximalaya.com",
+          "*.xmcdn.com"
+        ]
+      },
+      "health": {
+        "status": "ok",
+        "exports": [
+          "account",
+          "browse",
+          "home",
+          "played",
+          "recent",
+          "search",
+          "show",
+          "signIn",
+          "signOut",
+          "stream"
+        ],
+        "checkedAt": "2026-11-16T13:14:14Z"
+      },
+      "pushedAt": "2026-11-13T05:58:06Z",
+      "license": "MIT"
     },
     {
       "id": "youtube-music",
@@ -2168,9 +2442,9 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:28Z"
+        "checkedAt": "2026-11-16T13:14:15Z"
       },
-      "stars": 44,
+      "stars": 47,
       "pushedAt": "2026-11-06T15:03:21Z"
     },
     {
@@ -2219,7 +2493,7 @@
           "stream",
           "suggest"
         ],
-        "checkedAt": "2026-11-09T13:28:27Z"
+        "checkedAt": "2026-11-16T13:14:13Z"
       },
       "stars": 2,
       "pushedAt": "2026-11-07T13:24:28Z"
